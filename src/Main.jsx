@@ -9,6 +9,7 @@ const Main = () => {
 
     const getUser = async () => {
         try {
+            console.log('가져온다')
             const response = await apiNoToken("/api", "GET");
             console.log(response.data);
             setUserList(response.data);
