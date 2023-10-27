@@ -4,12 +4,12 @@ import {apiNoToken} from "./Api";
 const Main = () => {
 
     useEffect(() => {
-        getUser();
+        // getUser();
     },[]);
 
     const getUser = async () => {
         try {
-            console.log('가져온다')
+            console.log('가져온다!')
             const response = await apiNoToken("/api", "GET");
             console.log(response.data);
             setUserList(response.data);
@@ -97,12 +97,7 @@ const Main = () => {
                         </tr>
                         </thead>
                         <tbody>
-                        {userList.map((item) => (
-                            <tr key={item.id}>
-                                <td className="border px-4 py-2">{item.name}</td>
-                                <td className="border px-4 py-2">{item.text}</td>
-                            </tr>
-                        ))}
+
                         </tbody>
                     </table>
                 </div>
