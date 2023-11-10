@@ -13,6 +13,7 @@ const MyRouter = () => {
                 <Route element={<Template />}>
                     <Route path ='/' element={<Test/>}></Route>
                     <Route path ='/login' element={<Test2/>}></Route>
+                    <Route path ='/main' element={<Main/>}></Route>
                 </Route>
            </Routes>
 };

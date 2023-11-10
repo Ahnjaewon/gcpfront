@@ -22,21 +22,6 @@ const Test = () => {
         }
     );
 
-// 응답 인터셉터 설정
-//     api.interceptors.response.use(
-//         (response) => {
-//             // 응답을 처리할 수 있습니다.
-//             return response;
-//         },
-//         (error) => {
-//             if (error.response.status === 401) {
-//                 // 401 에러 발생 시 리다이렉트를 수행하거나 다른 동작을 할 수 있습니다.
-//                 // 예를 들어, 리다이렉트
-//                 window.location.href = '/login';
-//             }
-//             return Promise.reject(error);
-//         }
-//     );
 
     const handle401Error = (error) => {
         if (error.response.data === "Unauthorized: Expired JWT token") {
